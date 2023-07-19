@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block title %} {{title}} {% endblock %}
+{% block content %}
+    <div class="row">
+        <div class="col-md-5 offset-3 topMargin">
+            <div class="mt-4">
+                <h4 class="alert alert-info text-center">User Update Page</h4>
+            </div>
+            <form method="post">
+                <div class="form-group">
+                  <label>First Name</label>
+                  <input type="text" value={{user.first_name}} name = "fname" class="form-control" placeholder="Enter first nane" required>
+                </div>
+                <div class="form-group">
+                    <label>Last Name</label>
+                    <input type="text" name="lname" value={{user.last_name}} class="form-control" placeholder="Enter last name">
+                </div>
+                <div class="form-group">
+                    <label>Email address</label>
+                    <input type="email" name="email" value={{user.email}} class="form-control" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                  <label >Password</label>
+                  <input type="password" name="password" value={{user.password}} class="form-control" placeholder="Password">
+                </div>
+                <button type="submit" class="btn btn-success btn-block">Submit</button>
+              </form>
+        </div>
+        
+    </div>
+    
+{% endblock %}
